@@ -1,0 +1,94 @@
+.mainMenu{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50vh;
+    padding: 10px;
+    background-color: $cardColor;
+    
+    .menuLogo{
+        display: flex;
+        flex-direction: column;
+        background-color: $cardColor;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin:45px;
+        img{
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            background-color: $cardColor;
+        }
+        span{
+            background-color: $cardColor;
+            font-weight: 900;
+            color: $fontColor;
+        }
+    }
+
+    .menuList{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+        background-color: $cardColor;
+        &_container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $cardColor;
+            width: 100%;
+            padding: 0 15px 0 30px;
+            .title{
+                display: flex;
+                margin-bottom: 15px;
+                justify-content: space-between;
+                background-color: $cardColor;
+                width: 100%;
+                
+                
+                span{
+                    font-weight: 700;
+                    font-size: 16px;
+                    background-color: $cardColor;
+                }
+                .icon{
+                    background-color: $cardColor;
+                    fill: $fontColor;
+                    cursor: pointer;
+                }
+            }
+            .list{
+                display: flex;
+                flex-direction: column;
+                font-size: 12px;
+                background-color: $cardColor;
+                gap: 10px;
+                opacity: 0;
+                height: 0;
+                transition: all 500ms ease;
+                position: relative;
+                top: -40px;
+                span{
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+            }
+            .opened{
+                opacity: 1;
+                height: fit-content;
+                top: 0;
+                
+            }
+            .valid{
+                font-weight: 700;
+            }
+
+        }
+    }
+}

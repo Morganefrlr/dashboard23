@@ -1,0 +1,89 @@
+
+$fontColor : #1D1D1D;
+$backColor : #CFD4CE;
+$cardColor : #FBF8F3;
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: $fontColor;
+    background-color: $backColor;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.mainContainer{
+    &_left{margin: 40px 0 0 40px}
+    &_center{margin: 40px 20px 0 20px}
+    &_right{margin: 40px 40px 0 0}
+}
+
+.mainStart{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $cardColor;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img{
+        width: 100px;
+        height: 100px;
+        background-color: transparent
+    }
+    h1{
+        background-color: transparent;
+    }
+    input{
+        width: 70%;
+        height: 30px;
+        background-color: transparent;
+        border: 1px solid $fontColor;
+        padding: 5px;
+        &:focus{
+            outline: none;
+            border: 1px solid darken($backColor, 10);
+        }
+    }
+    button{
+        width: 20%;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        background-color: lighten($fontColor, 20);
+        color: $cardColor;
+        &:hover{
+            background-color: lighten($fontColor, 30);
+        }
+        &:active{
+            background-color: $backColor;
+            
+        }
+    }
+}
+.copyright{
+    font-size: 12px;
+    font-weight: 500;
+    
+
+}
+
+@import '../components/calculator/calculator';
+@import '../components/calendar/calendar';
+@import '../components/menu/menu';
+@import '../components/musique/musique';
+@import '../components/time/time';
+@import '../components/topbar/topbar';
+@import '../components/weather/weather';
+@import '../components/quiz/quiz';
+@import '../components/tiktaktoe/tik';
+@import '../components/memory/memory';
+@import '../components/todo/todo';
+

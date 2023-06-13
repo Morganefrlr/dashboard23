@@ -1,0 +1,118 @@
+.mainTodo{
+    width: 100%;
+    height: calc(90vh -  50px);
+    background-color: $cardColor;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        background-color: transparent;
+        margin: 30px auto;
+    }
+
+    &_form{
+        display: flex;
+        width: 80%;
+        margin: 40px auto;
+        background-color: transparent;
+        justify-content: center;
+        input{
+            height: 40px;
+            background-color: transparent;
+            width: 70%;
+            padding: 4px;
+            border: 1px solid $fontColor;
+            font-weight: 500;
+            &:focus{
+                border: 1px solid darken($backColor, 20);
+                outline: none;
+            }
+        }
+        button{
+            width: 20%;
+            border: none;
+            background-color: lighten($fontColor, 20);
+            color: $cardColor;
+            &:hover{
+                background-color: lighten($fontColor, 30);
+            }
+            &:active{
+                background-color: $backColor;
+                
+            }
+        }
+    }
+    .todolist{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 80%;
+        background-color: transparent;
+        align-items: center;
+        gap: 15px;
+
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 50px;
+            cursor: pointer;
+            background-color: $backColor;
+            justify-content: space-between;
+            box-shadow: 2px 1px 5px lighten($fontColor, 50);
+            &:hover{
+                background-color: darken($backColor, 2);
+            }
+        }
+        span{
+            width: 70%;
+            background-color: transparent;
+            margin-left: 10px;
+           
+        }
+        input{
+            height: 100%;
+            background-color: transparent;
+            width: 80%;
+            padding: 4px;
+            border: 1px solid $fontColor;
+            font-weight: 500;
+            &:focus{
+                border: 1px solid darken($backColor, 20);
+                outline: none;
+            }
+        }
+        button{
+            width: 20%;
+            height: 100%;
+            border: none;
+            background-color: lighten($fontColor, 20);
+            color: $cardColor;
+            &:hover{
+                background-color: lighten($fontColor, 30);
+            }
+            &:active{
+                background-color: $backColor;
+                
+            }
+        }
+        .completed{
+            text-decoration: line-through;
+        }
+        .icons{
+            display: flex;
+            width: 10%;
+            gap: 10px;
+            .icon{
+               fill: lighten($fontColor, 10);
+               &:hover{
+                fill: lighten($fontColor, 30);
+               }
+
+            }
+        }
+    }
+}

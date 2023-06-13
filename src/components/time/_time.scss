@@ -1,0 +1,13 @@
+.mainTime{
+    display: flex;
+    width: 30%;
+    background-color: $cardColor;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    span{
+        background-color: transparent;
+        font-weight: 500;
+        font-size: 30px;
+    }
+}

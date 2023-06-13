@@ -1,0 +1,58 @@
+.mainTik{
+    width: 100%;
+    height: calc(90vh -  50px);
+    background-color: $cardColor;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        margin: 30px;
+        background-color: transparent;
+    }
+    span{
+        margin: 30px auto ;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    table {
+        width: 90%;
+        height: fit-content;
+        background-color: transparent;
+        margin: 50px auto;
+        td{
+            border: 2px solid $fontColor;
+            width: 200px;
+            height: 200px;
+            background-color: $cardColor;
+            margin: 20px;
+            text-align:center;
+            font-size: 100px;
+            font-weight: 200;
+
+        }
+        .win{
+            background-color: lighten($backColor, 08);
+        }
+    }
+    .winner{
+        margin: 20px;
+        background-color: transparent;
+    }
+    .winnerBtn{
+        width: 30%;
+        height: 40px;
+        border: none;
+        background-color: lighten($fontColor, 10);
+        color: $cardColor;
+        cursor: pointer;
+        &:hover{
+            background-color: lighten($fontColor, 20);
+        }
+        &:focus{
+            background-color: $cardColor;
+            color: $fontColor;
+            border: 1px solid $fontColor;
+        }
+    }
+}
