@@ -10,11 +10,13 @@ import brouillard from '../../assets/weather/venteux-min.png'
 import pluis from '../../assets/weather/pluvieux-min.png'
 import bruine from '../../assets/weather/pluvieux(1)-min.png'
 
+
+
 const Weather = () => {
     const APIKEY = '7bbfe55193372c9c417ce61c6443972f'
     const [city, setCity] = useState('Paris')
     const [image, setImage] = useState(false)
-    let URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKEY}&units=metric&lang=fr`
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKEY}&units=metric&lang=fr`
     
     const [weather, setWeather] = useState(false)
  /**/
@@ -27,6 +29,7 @@ const Weather = () => {
             })
         }
         fetchWeather()
+        // eslint-disable-next-line
     }, []) 
 
     const handleClick = async (e) =>{
@@ -65,7 +68,7 @@ const Weather = () => {
                     {image === 'Snow' && 
                          <img src={neige} alt="" />
                     }
-                    {image === 'Mist' || image === 'Haze' && 
+                    {((image === 'Mist') || (image === 'Haze')) && 
                          <img src={brouillard} alt="" />
                     }
                     {image === 'Rain' && 

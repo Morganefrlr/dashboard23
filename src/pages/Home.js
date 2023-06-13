@@ -13,7 +13,7 @@ import Todo from "../components/todo/Todo";
 import Start from './Start'
 
 const Home = () => {
-    const [user, setUser] = useState("Morgane")
+    const [user, setUser] = useState(null)
     const [openApp, setOpenApp] = useState('todo')
 
     return (

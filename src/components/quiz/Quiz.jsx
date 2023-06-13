@@ -28,7 +28,7 @@ const Quiz = ({user}) => {
     useEffect(() =>{
         setQuestion(quiz[questionNbr -1])
 
-    },[quiz, questionNbr])
+    },[questionNbr])
 
     const delay = (duration, callback) =>{
         setTimeout(() => {

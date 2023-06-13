@@ -2,7 +2,6 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import FastForwardIcon from '@mui/icons-material/FastForward';
 import FastRewindIcon from '@mui/icons-material/FastRewind';
 import PauseIcon from '@mui/icons-material/Pause';
-import img from '../../assets/IMG_7852.jpg'
 import { useState, useRef } from 'react';
 import {music} from '../../data'
 
