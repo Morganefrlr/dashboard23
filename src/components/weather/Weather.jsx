@@ -17,14 +17,16 @@ const Weather = () => {
     const [city, setCity] = useState('Paris')
     const [image, setImage] = useState(false)
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKEY}&units=metric&lang=fr`
+    const [villeErreur, setVilleErreur] = useState(null)
     
     const [weather, setWeather] = useState(false)
  /**/
     useEffect (() =>{
         const fetchWeather = async () =>{
-            await axios.get(URL).then(res => {
+            await axios.get(URL).then(res => {   
                 setWeather(res.data)
                 setImage(res.data.weather[0].main)
+                
 
             })
         }
@@ -36,12 +38,13 @@ const Weather = () => {
         e.preventDefault()
         try{
             await axios.get(URL).then((res) =>{
+                setVilleErreur(null)
                 setWeather(res.data)
                 setImage(res.data.weather[0].main)
             })
         }
         catch(err){
-            console.log(err)
+            setVilleErreur(err.response.data.message)
         }
     }
 
@@ -56,7 +59,7 @@ const Weather = () => {
                <span>En cours de chargement...</span>
             }
             
-            {weather !== false &&
+            {villeErreur === null && weather !== false && 
                 <>
                     <h1>{weather && weather.name}</h1>
                     {image === 'Clear' && 
@@ -93,6 +96,9 @@ const Weather = () => {
                 
                 </>
             
+            }
+            {villeErreur === "city not found" &&
+                <span>Ville non trouvée</span>
             }
             
 

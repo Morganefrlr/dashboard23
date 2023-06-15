@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import { v4 as uuidv4 } from 'uuid';
 uuidv4();
@@ -41,7 +43,11 @@ const Todo = () => {
             <div className="todolist">
                 {todos.map((todo,index)=> 
                         <div className="item" key={index}>
-                            {todo.isEditing ? (<input  type="text" value={task} onChange={(e) => setTask(e.target.value)}/>) : (<span onClick={() => taskDone(todo.id)} className={todo.completed ? 'completed' : ''}>{todo.task}</span>)}
+                            {todo.isEditing ? (<input  type="text" value={task} onChange={(e) => setTask(e.target.value)}/>) : (
+                                <>
+                                   {todo.completed ? (<TaskAltIcon className='icon'onClick={() => taskDone(todo.id)} /> ) : (<RadioButtonUncheckedIcon className='icon' onClick={() => taskDone(todo.id)}/>)}
+                                    <span>{todo.task}</span>
+                                </>)}
                             {todo.isEditing ? (<button type='submit'onClick={() => handleEdit(todo.id)}>Modifier</button>) : 
                             (<div className="icons">
                                 <ModeEditIcon className='icon' onClick={() => handleUpdate(todo.id)}/>

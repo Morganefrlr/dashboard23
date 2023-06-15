@@ -15,9 +15,9 @@ $cardColor : #FBF8F3;
 
 
 .mainContainer{
-    &_left{margin: 40px 0 0 40px}
-    &_center{margin: 40px 20px 0 20px}
-    &_right{margin: 40px 40px 0 0}
+    &_left{margin: 3vh 0 3vh 2vw}
+    &_center{margin: 3vh 1vw 3vh 1vw; .boxTop{display: flex; height: 6vh; margin-bottom: 1.5vh;} }
+    &_right{margin: 3vh 2vw 3vh 0}
 }
 
 .mainStart{

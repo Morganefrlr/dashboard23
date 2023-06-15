@@ -13,7 +13,7 @@ import Todo from "../components/todo/Todo";
 import Start from './Start'
 
 const Home = () => {
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState('null')
     const [openApp, setOpenApp] = useState('todo')
 
     return (
@@ -33,7 +33,7 @@ const Home = () => {
                         <span className="copyright">©Copyright images, Freepik.com</span>
                     </div>
                     <div className="mainContainer_center"  style={{flex : 3}}>
-                        <div className="boxTop" style={{display : 'flex'}}>
+                        <div className="boxTop">
                             <Topbar user={user}/>
                             <Time />
                         </div>

@@ -3,11 +3,13 @@
     height: 25vh !important;
     max-height: none !important;
     background-color: $cardColor !important;
-    margin: 20px auto !important;
+    margin: 2vh auto !important;
 }
 
 
-
+.mainCalendar{
+    background-color: $cardColor;
+}
 div, button, span, svg{
     background-color: transparent;
 }

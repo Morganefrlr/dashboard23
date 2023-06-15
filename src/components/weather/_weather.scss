@@ -9,14 +9,14 @@
     .input{
         display: flex;
         background-color: transparent;
-        gap: 10px;
-        margin: 20px 0;
+        gap: 1vw;
+        margin: 1vh 0;
         button, .icon{
             border:none;
             background-color: transparent;
         }
         .icon{
-            font-size: 20px;
+            font-size: 1rem;
             cursor: pointer;
             fill: $backColor;
             &:hover{
@@ -24,7 +24,7 @@
             }
         }
         input{
-            padding: 2px;
+            padding: 0.5vh;
             border: 1px solid $backColor;
             background-color: transparent;
         }
@@ -32,25 +32,25 @@
             outline: 1px solid $fontColor;
         }
         button:focus .icon{
-            font-size: 22px;
+            font-size: 1.2rem;
         }
       
     }
     span{
-        font-size: 14px;
+        font-size: 1vh;
         margin-bottom: 5px;
         background-color: transparent;
         font-weight: 500;
     }
     h1{
-        font-size: 26px;
+        font-size: 2vh;
         font-weight: 600;
         margin-bottom: 5px;
         background-color: transparent;
     }
     img{
-        width: 100px;
-        height: 100px;
+        width: auto;
+       height:7vh;
         background-color: transparent;
         margin-bottom: 5px;
     }
@@ -59,7 +59,8 @@
         width: 80%;
         border: 1px solid lighten($fontColor, 70);
         background-color: transparent;
-        margin: 5px 0;
+        margin: 1vh 0;
+        height: 10vh;
         
         &_box{
             display: flex;
@@ -67,12 +68,12 @@
             justify-content: center;
             align-items: center;
             background-color: transparent;
-            padding: 5px;
+            padding:0.5vh;
             .icon{
-                font-size: 40px;
+                font-size: 150%;
                 fill: lighten($fontColor, 50);
                 background-color: transparent;
-                margin: 10px;
+                margin: 1vh;
             }
         }
         hr{

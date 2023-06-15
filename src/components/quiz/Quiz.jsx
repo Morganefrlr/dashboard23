@@ -49,6 +49,7 @@ const Quiz = ({user}) => {
                 setSelectedAnswer(null)
             }else{
                 setStop(true)
+                setTimer(0)
             }
         })
         
@@ -56,6 +57,16 @@ const Quiz = ({user}) => {
     useEffect(() =>{
         questionNbr >1 && setPoint(pointPyramid.find(p => p.id === questionNbr-1).point)
       },[questionNbr])
+
+
+    const handleRestart = () => {
+        setTimer(30)
+        setQuestionNbr(1)
+        setPoint(0)
+        setStop(null)
+        setQuestion(quiz[questionNbr -1])
+        setSelectedAnswer(null)
+    }
 
     return (
         <div className="mainQuiz">
@@ -76,7 +87,12 @@ const Quiz = ({user}) => {
                 </div>
             </div>
             <div className="mainQuiz_bottom">
-                {stop ? (<h1>{user} avez gagné {point} points</h1>) : 
+                {stop ? (
+                    <>
+                        <h1>{user} avez gagné {point} points</h1>
+                        <button onClick={handleRestart}>Recommencer</button>
+                    </>
+                ) : 
                 (<>
                     <div className='containerQ'>
                         <span>{question?.question}</span>
@@ -86,6 +102,7 @@ const Quiz = ({user}) => {
                             <li className={selectedAnswer === a ? active : 'answer'} key={index} onClick={() => handleClick(a)}>{a.text}</li>
                         ))}
                     </div>
+                    
                 </>)}
                 
             </div>

@@ -1,8 +1,8 @@
 .mainTodo{
     width: 100%;
-    height: calc(90vh -  50px);
+    height: calc(94vh -  7.5vh);
     background-color: $cardColor;
-    margin: 20px auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,20 +55,21 @@
 
         .item{
             display: flex;
-            justify-content: center;
             align-items: center;
             width: 80%;
             height: 50px;
             cursor: pointer;
             background-color: $backColor;
-            justify-content: space-between;
             box-shadow: 2px 1px 5px lighten($fontColor, 50);
             &:hover{
                 background-color: darken($backColor, 2);
             }
         }
+        .icon{
+            margin-left: 10px;
+        }
         span{
-            width: 70%;
+            width: 80%;
             background-color: transparent;
             margin-left: 10px;
            

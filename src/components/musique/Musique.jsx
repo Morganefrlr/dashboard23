@@ -38,14 +38,14 @@ const Musique = () => {
 		let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
 		if (direction === "skip-forward") {
 			await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-			activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
+			
 		} else if (direction === "skip-back") {
 			if ((currentIndex - 1) % songs.length === -1) {
 				await setCurrentSong(songs[songs.length - 1]);
-				activeLibraryHandler(songs[songs.length - 1]);
+				
 			} else {
 				await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
-				activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
+				
 			}
 		}
 		if (isPlaying) {
@@ -53,22 +53,6 @@ const Musique = () => {
 		}
 	};
 
-    const activeLibraryHandler = (newSong) => {
-		const newSongs = songs.map((song) => {
-			if (song.id === newSong.id) {
-				return {
-					...song,
-					active: true,
-				};
-			} else {
-				return {
-					...song,
-					active: false,
-				};
-			}
-		});
-		setSongs(newSongs);
-	};
 
     const updateTimeHandler = (e) => {
 		const currentTime = e.target.currentTime;

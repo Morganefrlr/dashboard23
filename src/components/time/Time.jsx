@@ -17,7 +17,7 @@ const Time = () => {
 
     return (
         <div className='mainTime'>
-            <span>{hours < 9 ? '0' + hours : hours} : {minutes < 9 ? '0' + minutes : minutes} : {seconds < 9 ? '0' + seconds : seconds}</span>
+            <span>{hours <= 9 ? '0' + hours : hours} : {minutes <= 9 ? '0' + minutes : minutes} : {seconds <= 9 ? '0' + seconds : seconds}</span>
             
         </div>
     );

@@ -17,6 +17,7 @@ const Calculator = () => {
 
 
   const calculate = () => {
+    // eslint-disable-next-line
     setCalc(eval(calc).toString())
   }
 

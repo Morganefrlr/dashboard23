@@ -5,7 +5,7 @@ const Tik = () => {
 
     const [turn, setTurn] = useState('Joueur 1: X')
     const [cells, setCells] = useState(Array(9).fill(''))
-    const [winner, setWinner] = useState(true)
+    const [winner, setWinner] = useState(false)
     const [cellsWin, setCellsWin] = useState()
 
     const checkWinner = (squares) =>{
@@ -42,6 +42,10 @@ const Tik = () => {
             alert('Déjà cliquée')
             return;
         }
+        if(winner){
+            alert('Recommencez la partie pour jouer')
+            return;
+        }
         let squares = [...cells]
         if(turn === 'Joueur 1: X'){
             squares[num]='X'
@@ -57,7 +61,7 @@ const Tik = () => {
     }
 
     const handleRestart = () =>{
-        setWinner(null)
+        setWinner(false)
         setCellsWin(null)
         setCells(Array(9).fill(''))
     }
