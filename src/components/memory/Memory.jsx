@@ -56,9 +56,19 @@ const Memory = () => {
             return;
         }
         else if(prev === -1){
-            items[index].stat = "active"
-            setItems([...items])
-            setPrev(index)
+            for(let i = 0; i< items.length; i++){
+                if(items[i].stat === 'active'){
+                    items[i].stat = ""
+                    items[index].stat = "active"
+                    setItems([...items])
+                    setPrev(index)
+                }else{
+                    items[index].stat = "active"
+                    setItems([...items])
+                    setPrev(index)
+                }
+            }
+            
         }else{
             check(index)
         }
