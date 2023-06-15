@@ -89,7 +89,7 @@ const Quiz = ({user}) => {
             <div className="mainQuiz_bottom">
                 {stop ? (
                     <>
-                        <h1>{user} avez gagné {point} points</h1>
+                        <h1>{user},vous avez gagné {point} points</h1>
                         <button onClick={handleRestart}>Recommencer</button>
                     </>
                 ) : 

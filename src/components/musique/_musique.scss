@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 35vh;
+    height: fit-content;
     background-color: $cardColor;
     margin-top: 20px;
     margin-bottom: 25px;
     align-items: center;
+    padding-bottom: 2vh;
     
     h1{
         font-size: 22px;
